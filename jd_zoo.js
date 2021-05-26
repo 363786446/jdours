@@ -1,33 +1,4 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
  
-@363786446 
-yangtingxiao
-/
-QuantumultX
-27
-289165
-Code
-Issues
-1
-Pull requests
-Projects
-Wiki
-Security
-Insights
-QuantumultX/scripts/jd/jd_zoo.js
-@yangtingxiao
-yangtingxiao 增加自动放技能控制
-Latest commit 8d5b50f 41 minutes ago
- History
- 1 contributor
-1069 lines (1032 sloc)  50.3 KB
-  
 /*
 动物联萌 618活动
 更新时间：2021-05-26 09:46
@@ -882,7 +853,7 @@ function zoo_pk_getHomeData(body = "",timeout = 0) {
       $.post(url, async (err, resp, data) => {
         try {
           if (body !== "") {
-            await $.getScript("https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/memo/jd_nianBeastShareCode.txt").then((text) => (shareCodeList = text.split('\n')))
+            await $.getScript("https://raw.githubusercontent.com/363786446/jdours/main/jd_zoo.txt").then((text) => (shareCodeList = text.split('\n')))
             for (let i in shareCodeList) {
               if (shareCodeList[i]) await zoo_pk_assistGroup(shareCodeList[i]);
             }
